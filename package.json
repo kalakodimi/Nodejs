@@ -1,7 +1,7 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "A Front-end service with node.js and handlebars for microservice example",
+  "description": "A Front-end service with node.js and handlebars for microservice example (test )",
   "main": "server.js",
   "scripts": {
     "start": "node ./src/server.js",

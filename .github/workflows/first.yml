@@ -28,3 +28,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: Login to Docker Hub
+    - run: docker login --username "${{ secrets.DOCKER_USERNAME }}" --password "${{ secrets.DOCKER_PASSWORD }}"
+    - name: Build the Docker Image 
+    - run: docker build . --file Dockerfile --tag johnsonojo2/nodejs
+    - name: Push the Docker Image 
+    - run: docker push krishnaprasadkv/nodejs
+    - env:
+        CI: true
